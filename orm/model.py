@@ -1,3 +1,9 @@
+class TTT():
+    def __init__(self,id):
+        self.id = id
+
+
+
 class Book():
     def __init__(self, _id, _name, _price):
         self.id = _id
