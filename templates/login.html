@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录页面</title>
+		<style type="text/css">
+			.content{
+				width: 1100px;
+				margin: 0 auto;
+				clear: both;
+				overflow: hidden;
+			}
+			.mid_content{
+				margin: 50px auto;
+			}
+			.dl{
+				width: 438px;
+				height: 400px;
+				background: #fff;
+				margin: 0 auto;
+			}
+			.dl h1{
+				width: 438px;
+				text-align: center;
+				height: 77px;
+				line-height: 77px;
+				border-bottom: 1px solid #E5E5E5;
+				font-size: 24px;
+			}
+			.sr{
+				padding: 53px 70px;
+			}
+			.sr li{
+				height: 65px;
+				text-align: center;
+				list-style: none;
+			}
+			.yhm{
+				width: 276px;
+				height: 48px;
+				border: 1px solid #E5E5E5;
+				line-height: 48px;
+				padding-left: 20px;
+			}
+			.ljdl{
+				width: 300px;
+				height: 50px;
+				line-height: 50px;
+				background: #F75C5C;
+				display: block;
+				text-align: center;
+				margin-top: 10px;
+			}
+			input{
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body style="background: #E7E7E7;">    
+		<div class="content">
+			<div class="mid_content">
+				<div class="dl">
+					<h1>用户登录</h1>
+					<form action="/login" method="post">
+						<ul class="sr">
+							<li>
+								<input class="yhm" type="text" name="username" autocomplete="off" placeholder="用户名"/><br>
+							</li>
+							<li>
+								<input  class="yhm" type="password" name="password"  autocomplete="off" placeholder="密码"/><br>
+							</li>
+							<li>
+								<input style="color:#fff;" class="ljdl" type="submit" value="登     录" />
+							</li>
+						</ul>
+					</form>	
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

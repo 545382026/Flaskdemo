@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>员工信息管理</title>
+    <link rel="stylesheet" type="text/css" href="../static/js/lib/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <script src="../static/js/lib/JQuery/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../static/js/lib/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		.top a{
+			font-size: 20px;
+			color: black;
+		}
+		.table-responsive a{
+			color: black;
+		}
+		table{
+			font-size: 18px;
+			width: 800px;
+		}
+	</style>
+</head>
+<body style="background: #e7e7e7;">
+	<div class="container">
+		<div class="top">
+			<h1>员工信息管理</h1>
+			{% if userinfo %}
+				
+				<span>=========================</span><br>
+				<a style="color: #b92c28; font-size: 28px;" href="#">您好！{{ userinfo }}</a><br>
+				<span>=========================</span><br>
+				<button type="button" class="btn btn-primary"><a href="/quit">退出</a></button>
+				<button type="button" class="btn btn-info"><a href="/">返回</a></button>
+				<button type="button" class="btn btn-success"><a href="/operate">添加</a></button>
+{#                <form action="/list" method="post" style="float: right;">#}
+{#                    <input type="text" name="name" style="height: 30px;" autocomplete="off" placeholder="输入姓名"/>#}
+{#                    <input type="submit" value="查询" style="background: #007FFF; height: 30px; width: 60px; font-size: 18px; ">#}
+{#                </form>#}
+
+			{% endif %}
+		</div>
+		
+		<div class="table-responsive">
+			<table class="table table-bordered table-condensed table-striped table-hover" >
+				<tr>
+
+					<th>id</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>年龄</th>
+					<th>联系方式</th>
+					<th style="width: 130px;">操作</th>
+				</tr>
+				{% for s in staff %}
+					<tr class="warning">
+						<td>{{ s[0] }}</td>
+						<td>{{ s[1] }}</td>
+						<td>{{ s[2] }}</td>
+						<td>{{ s[3] }}</td>
+						<td>{{ s[4] }}</td>
+						<td>
+							<button ><a href="/up/{{ s[0] }} ">修改</a></button>
+							<button ><a href="/{{ s[0] }}">删除</a></button>
+						 
+						</td>
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+</body>
+</html>
+

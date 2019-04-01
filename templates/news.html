@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>新闻首页</title>
+	</head>
+	<body>
+		<ul>
+            {% for new in news %}
+                <li><a href="#">{{ new }}</a></li>
+            {% endfor %}
+        </ul>
+	</body>
+</html>

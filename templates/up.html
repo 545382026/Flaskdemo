@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>员工信息修改</title>
+	</head>
+	<body>
+		<h1>员工信息修改</h1>
+		{% if userinfo %}
+		    <h3>
+		        <span>================</span><br>
+		        <a style="color: #b92c28" href="#">您好！{{ userinfo }}</a><br>
+		        <span>================</span><br>
+		       <a href="/quit" style="margin-right: 20px;">退出</a>
+		       <a href="/list">返回</a>
+		    </h3>
+		{% endif %}
+		<form action="/up/{{ num }}" method="post">
+			<span>姓名:</span>
+			<input type="text" name="name" value="{{ infos.name }}" autocomplete="off">
+		    <br>
+			<span>性别:</span>
+			<input type="text" name="gender" value="{{ infos.gender }}" autocomplete="off">
+		    <br>
+			<span>年龄:</span>
+			<input type="text" name="age" value="{{ infos.age }}" autocomplete="off">
+		    <br>
+			<span>电话:</span>
+			<input type="text" name="phone" value="{{ infos.phone }}" autocomplete="off" />
+		    <br>
+			<input type="submit" value="修改" />
+		</form>
+	</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>员工信息修改</title>
+		<link rel="stylesheet" type="text/css" href="../static/js/lib/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+		<script src="../static/js/lib/JQuery/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/js/lib/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.top{
+				margin-left: 140px;
+				margin-bottom: 30px;
+			}
+		</style>
+	</head>
+	<body style="background: #E7E7E7;">
+      <div class="container">
+			<div class="top">
+				<h1>员工信息修改</h1>
+				{% if userinfo %}
+				    <h3>
+				        <span>****************</span><br>
+				        <a style="color: #b92c28" href="#">您好！{{ userinfo }}</a><br>
+				        <span>****************</span><br>
+						<a href="/quit" style="margin-right: 20px;">退出</a>
+				        <a href="/list">返回</a>
+				    </h3>
+				{% endif %}
+			</div>
+			<form class="form-horizontal" role="form" action="/up/{{ num }}" method="post" style="margin: 0 auto;">
+			  <div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">姓名</label>
+				<div class="col-sm-10 col-lg-3">
+				  <input type="text" name="name" class="form-control" value="{{ infos.name }}" autocomplete="off">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="lastname" class="col-sm-2 control-label">性别</label>
+				<div class="col-sm-10 col-lg-3">
+				  <input type="text" name="gender" class="form-control" value="{{ infos.gender }}" autocomplete="off">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">年龄</label>
+				<div class="col-sm-10 col-lg-3">
+				  <input type="text" name="age" class="form-control" value="{{ infos.age }}" autocomplete="off">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">电话</label>
+				<div class="col-sm-10 col-lg-3">
+				  <input type="text" name="phone" class="form-control" value="{{ infos.phone }}" autocomplete="off">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+				  <input type="submit" value="修改" style="height: 40px; width: 60px; background: blanchedalmond;" />
+				</div>
+			  </div>
+			</form>
+		</div>
+		
+	</body>
+</html>
+
